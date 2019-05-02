@@ -1,0 +1,434 @@
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.invalid-feedback ul{list-style-type: none; padding: 0px; color: red;}
+.alert-error {color: red;}
+.alert-success {color: rgb(183, 191, 0);}
+.cancel {background-color: rgb(244, 100, 95);}
+
+.approved {background-color: #3498db; color: white; transition-duration: 0.2s;}
+.approved:hover {background-color: #2980b9;}
+.rejected {background-color: #e74c3c; color: white; transition-duration: 0.2s;}
+.rejected:hover {background-color: #c0392b;}
+.pending {background-color:  #ecf0f1; color: black; transition-duration: 0.2s;}
+.pending:hover {background-color: #bdc3c7;}
+
+.btn-state a {margin: 5px; text-decoration: none; color: white;}
+.form-btn-approved {background-color: #3498db; color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; text-decoration: none;}
+.form-btn-approved:hover {background-color: #2980b9;}
+.form-btn-delete {background-color: #e74c3c; color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; border: none;}
+.form-btn-delete:hover {background-color: #c0392b;}
+.form-btn {font-size: 0.8em; color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; text-decoration: none;}
+.more-images {background-color: rgb(128, 127, 254); border: none;}
+.more-images:hover {background-color: rgb(101, 101, 206);}
+.request-adopt, .request-adopt:visited, .request-adopt:visited {background-color: #e67e22;}
+.request-adopt:hover {background-color: #d35400;}
+
+.container {
+  text-align: center;
+}
+.container-section {margin: auto; margin-top: 20px; padding: 20px; width: 90%; background-color: rgb(244, 244, 244); border-radius: 20px; text-align: center;}
+.header {display: inline-block;}
+.header-main {border-bottom: 5px dotted rgb(146, 144, 157);}
+.header-sub {border-bottom: 5px dotted rgba(146, 144, 157, 0.5);}
+.container-header {display: block;}
+
+/* NAVIGATION BAR */
+.navigation {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  background-color: rgb(188, 191, 33);
+  box-shadow: 0px 5px 10px rgba(178, 178, 178, 0.5);
+}
+
+.nav-title {display: flex; height: 100%;}
+.nav-title > h1 {margin-left: 20px; margin-right: 20px; font-family: 'Raleway';}
+.nav-title > h1 > a {text-decoration: none; color: #2c3e50; transition-duration: 0.3s;}
+.nav-title > h1 > a:hover {color: rgb(71, 98, 124);}
+.nav-title > img {max-width: 100%; max-height: 100%; margin-top: -5px;}
+
+.nav-links ul {display: flex; margin-top: 27.5px; margin-right: 15px; list-style-type: none;}
+.nav-links a {
+  margin: 5px;
+  padding: 12.5px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+}
+.nav-links a:hover {background-color: rgb(146, 150, 21);}
+
+/* FOOTER BAR */
+.footer {text-align: center; height: 240px; padding: 20px;}
+.footer > img {height: 50%;}
+.footer span {color: rgb(244, 100, 95);}
+
+.footer-links {}
+.footer-links > ul {display: flex; justify-content: center; list-style-type: none;}
+.footer-links a {margin: 15px; color: #2c3e50; font-size: 1.2em; text-decoration: none;}
+.footer-links a:hover {text-decoration: underline; color: rgb(188, 191, 33);}
+
+.footer h1 {font-size: 1.5em;}
+.footer h2 {margin-top: -5px; font-size: 1em;}
+
+/* HOME */
+.home {text-align: center;}
+.home h1 {margin-top: 50px; display: inline-block; font-size: 2.5em; border-bottom: 5px dotted rgb(146, 144, 157);}
+.home p {margin: 10px; font-size: 1.5em;}
+
+.home-images {display: flex; justify-content: space-around; margin-top: 30px;}
+.home-images > div {padding: 10px; margin-bottom: 20px; width: 42.5vw; height: 520px; box-shadow: 0px 5px 10px rgba(178, 178, 178, 0.5);}
+.home-images img {max-width: 100%; max-height: 100%;}
+
+.home-2 {padding-bottom: 20px;}
+.home-2-animals {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home-2-animals > div {margin: 15px; width: 29%; height: 400px; background-size: cover; box-shadow: 0px 5px 10px rgba(178, 178, 178, 0.5); transition-duration: 0.3s;}
+.home-2-animals > div:hover {
+  transform: scale(1.025);
+}
+.home-2-animals > div > p {display: inline-block; padding: 15px; color: white; background-color: rgba(153, 193, 204, 0.5); border-radius: 30px;}
+#main-2-1 {background-image: url('../storage/images/animals/dog.jpg');}
+#main-2-2 {background-image: url('../storage/images/animals/alpaca.jpg');}
+#main-2-3 {background-image: url('../storage/images/animals/dolphin.jpg');}
+#main-2-4 {background-image: url('../storage/images/animals/lion.jpg');}
+#main-2-5 {background-image: url('../storage/images/animals/penguin.jpg');}
+#main-2-6 {background-image: url('../storage/images/animals/cow.jpg');}
+#main-2-7 {background-image: url('../storage/images/animals/duck.jpg');}
+#main-2-8 {background-image: url('../storage/images/animals/hedgehog.jpg');}
+#main-2-9 {background-image: url('../storage/images/animals/monkey.jpg');}
+
+.home-3 {
+  background-image: url('../storage/images/animals/fox.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100% auto;
+  height: 800px;
+}
+.home-3 > h1 {color: white; display: inline-block;}
+.home-3 > div {margin: auto; padding: 20px; color: white; width: 80vw;}
+.home-3 > div button {
+  margin: 0px 25px;
+  padding: 25px;
+  width: 20vw;
+  font-size: 1.5em;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.3s;
+}
+#home-btn-1 {background-color: rgb(188, 191, 33); padding: 25px 35px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);}
+#home-btn-1:hover {background-color: white; color: rgb(188, 191, 33); text-decoration: underline;}
+#home-btn-2 {background-color: rgb(244, 100, 95); padding: 25px 35px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);}
+#home-btn-2:hover {background-color: white; color: rgb(244, 100, 95); text-decoration: underline;}
+.home-3 > p {color: white;}
+
+.home-4 a, .home-4 a:visited {
+  text-decoration: none;
+  color: rgb(244, 100, 95);
+  transition-duration: 0.3s;
+}
+.home-4 a:hover {text-decoration: underline; color: #c0392b;}
+
+/* LOGIN */
+.login {
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  width: 35vw;
+}
+.login input[type=text],input[type="password"] {
+  text-align: left;
+  display: block;
+  margin: 15px auto;
+  padding: 20px 30px;
+  width: 70%;
+  color: rgb(146, 144, 157);
+  font-size: 20px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  border-style: none;
+}
+.login-hyper {display: flex; justify-content: space-between; width: 80%; margin: auto; margin-bottom: 15px;}
+.login-hyper a, a:visited, a:active {font-size: 17px; text-decoration: none;}
+.login-hyper a:hover {text-decoration: underline;}
+.login-remember {display: flex; align-items: center;}
+.login-remember label {margin-left: 5px; padding-top: 2.5px;}
+.login button {
+  color: white;
+  border-radius: 3px;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.login button, .login input[type=submit] {display: block; background-color:rgb(188, 191, 33);  margin-bottom: 10px;}
+button:hover, input[type=submit]:hover, input[type=reset]:hover {background-color: rgb(146, 150, 21);}
+.login-admin-login {color: rgb(147, 147, 147);}
+.login-forgot a {text-decoration: none; color: rgb(146, 144, 157);}
+.login-forgot a:hover {text-decoration: underline; color: rgb(44, 62, 80);}
+
+/* REGISTER */
+/*
+.register {
+  width: 50vw;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+.register h1 {text-align: center;}
+.register-row {display: flex; padding: 10px; justify-content: center; font-size: 1.6em; text-align: center;}
+.register-row > div {width: 45%;}
+.register-row label, input, select {display: block; margin: auto; margin-top: 5px;}
+.register-row input, select {padding: 10px;}
+.register-row label {text-align: center;}
+.register-row input[type=text],input[type=number],input[type=date],input[type=email] {
+  color: rgb(146, 144, 157);
+  background-color: rgb(230, 230, 230);
+  border-style: none;
+  border-radius: 5px;
+}
+.register-row input[type="submit"] {border-radius: 5px; color: white; background-color: rgb(183, 191, 0); width: 81%; transition-duration: 0.3s;}
+.register-row input[type="submit"]:hover {background-color: rgb(146, 150, 21);}
+.register-row select {width: 80%; height: 50%;}
+.field-input {height: 30%;}
+.register-row span {font-size: 0.75em; margin: auto; color: red; text-align: center;}
+*/
+.register-existing-account {margin: 0px auto; justify-content: space-between; align-items: center; width: 77.5%; font-size: 1.3em;}
+.register-existing-account p {margin-bottom: 10px;}
+.register-existing-account a {height: 100%;text-decoration: none; transition-duration: 0.3s;}
+.register-existing-account a:hover {text-decoration: underline; color: rgb(188, 191, 33);}
+
+/* USER DASHBOARD */
+.btn-make-query {display: inline-block; padding: 15px; color: white; background-color: #3498db; text-decoration: none; border-radius: 15px; box-shadow: 0px 5px 10px rgba(0,0,0,0.10); transition-duration: 0.3s;}
+.btn-make-query:hover {background-color: #2980b9;}
+
+/* ADMIN DASHBOARD */
+.container-display {}
+.container-display table {margin: auto; padding: 20px; table-layout: fixed; border-collapse: collapse; font-size: 1.2em;}
+.container-display tr {border: 4px solid rgb(146, 144, 157);}
+.container-display td {padding: 10px; border: 4px solid rgb(146, 144, 157);}
+.thead-row {text-decoration: underline;}
+.td-image {width: 10%;}
+.table-image {margin: auto;}
+.table-image > img {width: 100%;}
+
+/* SHARED DASHBOARD STYING */
+.title {display: block; margin: 0px;}
+.title-name {margin-top: 30px;}
+.title-dashboard {font-size: 2em; padding: 10px;}
+
+/* SHARED USER ACTIONS */
+.container-buttons-actions {display: flex; justify-content: center; align-items: center; height: 100px;}
+.container-buttons-actions > a {
+  margin: 20px;
+  padding: 15px 20px;
+  background-color: rgb(183, 191, 0);
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0px 5px 7.5px rgba(178, 178, 178, 0.3);
+
+  transition-duration: 0.3s;
+}
+.container-buttons-actions > a:hover {background-color: rgb(146, 150, 21);}
+
+/* CREATE ANIMAL */
+.container-form {margin: auto; margin-top: 70px; padding: 10px; width: 60%; background-color: rgb(244, 244, 244); border-radius: 20px; text-align: center;}
+animals-create-availability-input-pair {width: 550px;}
+
+/* ANIMAL LIST*/
+.animals {}
+.animals table {margin: auto; padding: 20px; border-collapse: collapse; font-size: 1.5em;}
+.animals thead {border: 3px solid rgb(146, 144, 157);}
+.animals tbody {border: 3px solid rgb(146, 144, 157);}
+.animals tr:nth-child(2n) {background-color: rgb(230, 230, 230);}
+.animals td {padding: 10px 20px; border: 2px solid rgb(230, 230, 230);}
+.btn-show-all-animals {display: inline-block; color: white; background-color: rgb(244, 100, 95); margin-top: 15px; padding: 10px 25px; text-decoration: none; border-radius: 30px; transition-duration: 0.3s;}
+.btn-show-all-animals:hover {background-color: rgb(196, 84, 80);}
+.animal-filter-list {display: flex; justify-content: center; list-style: none;}
+.animal-filter-list > li {padding: 0px 10px;}
+.animal-filter-list > li:not(:nth-child(1)):not(:nth-last-child(1)) {border-right: 2px solid #95a5a6;}
+.animal-filter-link, .animal-filter-link:visited {text-decoration: none; color: #2980b9;}
+/* border: 4px solid rgb(146, 144, 157);*/
+
+/* SHOW ANIMAL */
+.image-container {width: 20%; margin: auto; padding: 10px;}
+.image-bordered {border: 4px solid rgba(146, 144, 157, 0.5); border-radius: 7.5px;}
+
+/* FORM FIELD STYLING */
+.field-title {font-size: 1.5em;}
+.form-row {display: flex; justify-content: center; width: 60%; margin: auto; margin-bottom: 10px;}
+.form-submit input {
+  border: none;
+  margin-top: 20px;
+  color: white;
+  transition: 0.3s;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+}
+.form-submit input[type=submit] {font-size: 1.5em; background-color: rgb(183, 191, 0); padding: 20px 100px;}
+.form-submit input[type=submit]:hover {background-color: rgb(146, 150, 21);}
+.form-submit input[type=reset] {font-size: 1em; background-color: rgb(244, 100, 95); padding: 10px 50px; margin-top: 10px;}
+.form-submit input[type=reset]:hover {background-color: rgb(206, 78, 74);}
+.form-submit {border-top: 2px solid rgb(146, 144, 157); width: 70%; margin: auto; padding-top: 15px;}
+.form-input-pair {margin: 10px;}
+.form-input-pair select {width: 260px; height: 45px;}
+.form-input-pair > textarea {border-radius: 5px; border: 3px solid rgb(146, 144, 157); height: 75%; padding: 10px;}
+.form-input-pair > label {display: block; margin-bottom: 5px;}
+.form-input-pair > input {
+  padding: 10px;
+  color: rgb(146, 144, 157);
+  background-color: rgb(230, 230, 230);
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+.form-input-pair input[type=date] {height: 32.5%;}
+.form-input-pair > input[type=password] {width: 90%;}
+.field-checkbox-pair {font-size: 1.5em; padding: 10px;}
+.field-checkbox-pair > input[type=checkbox] {zoom: 2;}
+.inputfile {
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  background-color: rgb(183, 191, 0);
+  border-radius: 30px;
+}
+.form-image-pair {border: 3px solid rgba(146, 144, 157, 0.5); padding: 20px; border-radius: 10px;}
+.form-image-pair > img, .form-image-pair > label {display: block;}
+.form-image-pair > img {margin-top: 15px;}
+.form-caption {font-size: 1.1em;}
+
+/* ERROR DISPLAY STYLING */
+.errors ul {padding: 0px; list-style-type: none; color: red;}
+
+/* WELCOME */
+.container-column-split {display: flex; justify-content: center; align-items: center; width: 85vw; margin: auto; font-family: 'Muli', 'Avenir', Helvetica, Arial, sans-serif;}
+.container-column-split > div {height: 650px; width: 50vw;}
+.container-column-split h1, .container-column-split h2, .container-column-split p {
+  margin: 10px 30px;
+  display: block;
+  text-decoration: none;
+  border: none;
+  text-align: left;
+  font-weight: normal;
+}
+.container-column-split h1 {margin-top: 30px;}
+.container-column-split h2 {color: rgb(146, 150, 21);}
+.container-column-split p {margin-top: 25px; width: 85%;}
+.container-col-split-inner {display: flex; margin-left: 15px; margin-top: 30px;}
+.container-col-split-inner p {display: inline-block; margin: 0px;}
+.container-col-split-inner p:nth-child(2n) {color: gray; font-size: 1.25em;}
+.container-col-split-inner > div {display: inline; width: 30%;}
+.container-col-split-right img {width: 90%; margin-top: 30px;}
+.container-col-split-col-2 {border-left: 2px solid rgb(146, 144, 157); border-right: 2px solid rgb(146, 144, 157);}
+
+.container-review {display: flex; justify-content: center; text-align: left;}
+.container-review-col {border: 1px solid black; margin: 20px 50px; border: 4px solid rgb(230, 230, 230); border-radius: 10px; padding: 10px;}
+.container-review-col p:nth-child(2n) {text-align: right; color: rgb(146, 144, 157);}
+
+.references {border: 4px solid rgba(146, 144, 157, 0.5); width: 30%; margin: auto; border-radius: 10px;}
+.references ul {list-style: none; color: rgb(146, 144, 157); text-decoration: none; padding: 0px;}
+.references li {margin: 10px;}
+
+/* IMAGES OF ANIMAL */
+
+.container-multi-images {display: flex; justify-content: center; align-items: center; flex-wrap: wrap; width: 90%; margin: auto;}
+.container-multi-image {width: 20%; margin: 0px 10px;}
+.container-multi-image > img {border: 4px solid rgba(146, 144, 157, 0.5); border-radius: 10px;}
+.container-multi-image > a {display: inline-block; text-decoration: none; padding: 10px 12.5px; border-radius: 20px; color: white; background-color: #e74c3c; transition-duration: 0.5s;}
+.container-multi-image > a:hover {background-color: #c0392b;}
+.btn-add-image {display: inline-block; margin: 20px; padding: 10px 100px; background-color: rgb(183, 191, 0); color: white; border-radius: 50px; font-size: 1.2em; transition-duration: 0.3s; text-decoration: none;}
+.btn-add-image:hover {background-color: rgb(146, 150, 21);}
+
+/* QUERY */
+.show-query-question {width: 70%; margin: 20px auto;}
+.show-query-question > textarea {display: block; margin: auto; padding: 10px; margin-top: 10px; border-radius: 10px;}
+.show-query-question > a {
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 25px;
+  color: white;
+  background-color: rgb(183, 191, 0);
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+.show-query-question > a:hover {background-color: rgb(146, 150, 21);}
+
+/* USER DASHBOARD - animal list*/
+.animals-visual {display: flex; flex-wrap: wrap;}
+.animals-visual-box {
+  margin: 10px;
+  border: 2px solid #bdc3c7;
+  width: 18%;
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.1);
+  transition-duration: 0.3s;
+}
+.animals-visual-box:hover {transform: scale(1.01); box-shadow: 5px 0px 10px rgba(0,0,0,0.2);}
+.animals-visual-box img {width: 100%;}
+.animals-visual-box > div:not(:nth-last-child(1)) {border-bottom: 2px solid #bdc3c7;}
+.animals-visual-pairs {}
+.animals-visual-pair {display: flex; align-items: center;}
+.animals-visual-pair > h1 {font-size: 1.1em; margin: 5px 15px 5px 10px;}
+.animals-visual-pair > p {font-size: 1em; text-align: left;}
+.animals-visual-box-buttons {display: flex; justify-content: center; align-items: center;}
+.animals-visual-box-buttons > a {
+  color: white;
+  margin: 15px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.animals-visual-description {height: 100px;}
+.animals-visual-requested {background-color: #d35400;}
+.animals-visual-request {background-color: #e67e22;}
+.animals-visual-request:hover {background-color: #d35400;}
+.animals-visual-details {background-color: #95a5a6;}
+.animals-visual-details:hover {background-color: #7f8c8d;}
+.animals-visual-pending {background-color: #95a5a6;}
+.animals-visual-pending:hover {background-color: #7f8c8d;}
+.animals-visual-approved {background-color: #2ecc71;}
+.animals-visual-approved:hover {background-color: #27ae60;}
+.animals-visual-rejected {background-color: #e74c3c;}
+.animals-visual-rejected:hover {background-color: #c0392b;}
+
+/* ADOPTION REQUETS - animal list - visual*/
+.requests-visual {display: flex; flex-wrap: wrap; justify-content: center;}
+.requests-visual-box {color: red; border: 5px solid blue;}
+.requests-visual-box-buttons {}
+.requests-visual-box-buttons > a {
+  color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.requests-visual-box-buttons button {
+  width: 95%;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
