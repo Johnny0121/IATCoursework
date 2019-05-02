@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2019 at 03:13 PM
+-- Generation Time: May 01, 2019 at 10:58 PM
 -- Server version: 5.5.62
 -- PHP Version: 7.2.17
 
@@ -45,7 +45,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `forename`, `surname`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'johnny', 'le', 'lej1@aaa.ac.uk', NULL, '$2y$10$gJ95ll2O1MfgMR7BgWP4kuVyfMa2w.VmiT7wI24PuGu95QjeOZYb2', NULL, '2019-04-22 15:44:18', '2019-04-22 15:44:18');
+(1, 'johnny', 'le', 'lej1@aaa.ac.uk', NULL, '$2y$10$HGm8D8UkvKrTyjkHfOQ63.Z/cdY7SXQMVsjcXxrNhUNT6ytvlO7Qu', NULL, '2019-05-01 19:55:18', '2019-05-01 19:55:18');
 
 -- --------------------------------------------------------
 
@@ -68,8 +68,9 @@ CREATE TABLE `adoption_requests` (
 --
 
 INSERT INTO `adoption_requests` (`id`, `userid`, `animalid`, `description`, `state`, `created_at`, `updated_at`) VALUES
-(1, 2, 1, 'Please please', 'approved', '2019-04-23 10:52:04', '2019-04-23 13:29:18'),
-(2, 1, 1, NULL, 'pending', '2019-04-23 13:15:28', '2019-04-23 13:15:28');
+(1, 1, 1, 'This animal is very cool. much coolios.', 'approved', '2019-05-01 21:23:02', '2019-05-01 21:36:50'),
+(2, 1, 3, NULL, 'pending', '2019-05-01 21:26:25', '2019-05-01 21:26:25'),
+(3, 1, 9, NULL, 'rejected', '2019-05-01 21:27:25', '2019-05-01 21:36:50');
 
 -- --------------------------------------------------------
 
@@ -97,11 +98,19 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`id`, `name`, `animal`, `type`, `date_of_birth`, `microchipped`, `vaccinated`, `availability`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Momo', 'Human', 'Siberian', '1999-08-20', 1, 1, 1, 'A good momo.', 'earth_1555951630.jpg', '2019-04-22 15:47:10', '2019-04-22 15:47:10'),
-(2, 'Croacky', 'frog', 'Siberian', '1999-08-20', 1, 1, 1, 'A good froggy.', 'Chika_1555780794_1556022961.png', '2019-04-23 11:04:53', '2019-04-23 11:36:01'),
-(3, 'Muller Yoghurt', 'hedgehog', 'Cute', '1954-07-20', 1, 1, 1, 'A cute little hedgehog ready for battle.', 'Kermit_1555852376_1556029845.png', '2019-04-23 13:30:45', '2019-04-23 13:30:45'),
-(4, 'momoshipo', 'lion', 'British', '2019-04-27', 1, 1, 1, 'Roar. Roar.', 'Kermit_1555852376_1556030419.png', '2019-04-23 13:40:19', '2019-04-23 13:40:19'),
-(5, 'Pico', 'panda', 'Chinese', '2019-04-01', 1, 1, 0, 'A good panda.', '804fac03d0b21b4558580df3d93f7ed1_1555815935_1556030495.png', '2019-04-23 13:41:11', '2019-04-23 13:41:35');
+(1, 'Kermit', 'frog', 'Tree', '2010-08-20', 1, 0, 1, 'A high depressed frog that needs a new home after his old pond had been blown to bits by a bomb.', 'kermit_1556744237.png', '2019-05-01 19:57:17', '2019-05-01 19:57:17'),
+(2, 'Zingo', 'monkey', 'Mandril', '1997-08-12', 1, 1, 1, 'A jolly mandril monkey who loves eating bananas 24/7 and making new friends.', 'mandrillmonkey(1)_1556747301.png', '2019-05-01 20:48:21', '2019-05-01 20:48:21'),
+(3, 'Kermit', 'frog', 'Siberian', '1999-05-12', 1, 1, 1, 'A very depressed frog looking for companionship but cannot find it. He needs to friends to boost his self-esteem again.', 'kermit_1556747387.png', '2019-05-01 20:49:47', '2019-05-01 20:49:47'),
+(4, 'Pingu', 'penguin', 'Antarctic', '2005-02-19', 0, 1, 1, 'A warm insulated fatty penguin looking for a new home with a lot of fatty foods.', 'pingu_1556747448.jpg', '2019-05-01 20:50:48', '2019-05-01 20:50:48'),
+(5, 'Ruffles', 'cow', 'Highland Cattle', '2003-12-31', 1, 1, 1, 'A super-galactic rad cow, looking for new cow friends in a new barn. His friends ditched him because his hair was too rad for the cow group.', 'hairycow_1556747527.jpg', '2019-05-01 20:52:07', '2019-05-01 20:52:07'),
+(6, 'Croacky', 'frog', 'Siberian', '2018-01-03', 1, 1, 1, 'A good froggy that dreams to one day be the mascot for Freddo\'s chocolate bars.', 'frog_1556747577.jpg', '2019-05-01 20:52:57', '2019-05-01 20:52:57'),
+(7, 'Shushu', 'panda', 'Chinese', '2004-08-16', 1, 1, 1, 'A chinese panda looking for a new home with lots of bamboo shoots to eat.', 'happypanda_1556747674.jpg', '2019-05-01 20:54:34', '2019-05-01 20:54:34'),
+(8, 'Nomnom', 'monkey', 'Chinese', '1998-11-04', 1, 0, 1, 'A chinese full-sized adult panda looking for a new home to retire.', 'oldpanda_1556747740.jpg', '2019-05-01 20:55:40', '2019-05-01 20:55:40'),
+(9, 'Moko', 'panda', 'Vietnamese', '2013-04-02', 1, 1, 1, 'A very lazy panda that does nothing all day but steals his brother\'s bamboo shoots and slaps his dad. Help him be separated from his family, forced into PandaCamp and taught proper Panda etiquette.', 'lazypanda(1)_1556747977.png', '2019-05-01 20:59:38', '2019-05-01 20:59:38'),
+(10, 'Chika', 'human', 'Kawaii', '2003-04-30', 1, 1, 1, 'This girls has swag and is on the daily dance grind. She hopes to one day become a rapper, and worldwide handsome.', 'Chika_1556748381.png', '2019-05-01 21:06:21', '2019-05-01 21:06:21'),
+(11, 'TriggeredKermit', 'frog', 'Imposter', '2019-05-07', 0, 1, 1, 'An unhappy frog with the fact that someone stole his name.', 'Kermit_1556748442.png', '2019-05-01 21:07:22', '2019-05-01 21:07:22'),
+(12, 'Happy', 'duck', 'Exceed', '2000-09-19', 1, 1, 1, 'A small blue enthusiastic bundle of joy.', 'happy_1556748611.png', '2019-05-01 21:10:11', '2019-05-01 21:10:11'),
+(13, 'Tortor', 'turtle', 'Sea', '1600-12-12', 1, 1, 0, 'A very old unhappy turtle.', 'turtle_1556748726.jpg', '2019-05-01 21:12:06', '2019-05-01 21:12:06');
 
 -- --------------------------------------------------------
 
@@ -122,7 +131,8 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `animalid`, `image`, `created_at`, `updated_at`) VALUES
-(3, 2, 'harambe_1556036799.jpg', '2019-04-23 15:26:39', '2019-04-23 15:26:39');
+(1, 5, 'ruffles2(1)_1556750136.jpg', '2019-05-01 21:35:36', '2019-05-01 21:35:36'),
+(2, 5, 'youngruffles(1)_1556750178.jpg', '2019-05-01 21:36:18', '2019-05-01 21:36:18');
 
 -- --------------------------------------------------------
 
@@ -182,10 +192,9 @@ CREATE TABLE `queries` (
 --
 
 INSERT INTO `queries` (`id`, `userid`, `question`, `response`, `responded_at`, `created_at`, `updated_at`) VALUES
-(2, 1, 'How many adoptions can I make in a day?', NULL, NULL, '2019-04-23 13:22:17', '2019-04-23 13:22:17'),
-(3, 1, 'Are my account details safe from disgusting filths?', NULL, NULL, '2019-04-23 13:22:40', '2019-04-23 13:22:40'),
-(4, 1, 'I would like to adopt a siberian tiger. Do you have any tigers available?', 'No, go away. Stop pestering the Aston animal team.\r\n- Johnny Le', '2019-04-23 14:29:03', '2019-04-23 13:23:13', '2019-04-23 13:29:03'),
-(5, 4, 'How many spoons can be balanced on a pig\'s face?', NULL, NULL, '2019-04-23 13:59:30', '2019-04-23 13:59:30');
+(1, 1, 'Hello, how many pandas do you guys have in-stock?', NULL, NULL, '2019-05-01 21:27:55', '2019-05-01 21:27:55'),
+(2, 1, 'Hello, is there a limit to the number of adoption requests I can make in a single day?', 'Hello! \r\nYou can make as much requests as you wish\r\n- Johnny Le', '2019-05-01 22:36:42', '2019-05-01 21:28:16', '2019-05-01 21:36:42'),
+(3, 1, 'Hello Aston Team, do you have a contact page?', NULL, NULL, '2019-05-01 21:28:55', '2019-05-01 21:28:55');
 
 -- --------------------------------------------------------
 
@@ -213,11 +222,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `forename`, `surname`, `email`, `telephone`, `gender`, `date_of_birth`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Timmiy', 'Turner', 'turnert@aaa.ac.uk', '07425725638', 'male', NULL, NULL, '$2y$10$VJfhvhLZfKx8p4iQq17hd.spzMP4nrXq1AJwoa7Pi8yGfen1MGz3G', NULL, '2019-04-22 15:18:56', '2019-04-22 15:40:06'),
-(2, 'james', 'chikcken', 'chickenj@aaa.ac.uk', '07539387174', 'male', NULL, NULL, '$2y$10$8so3LJd.mot53wzO1Jl/4uY7etJoL9.8ykDgVGzr9jxaycN9INF6.', NULL, '2019-04-23 09:15:58', '2019-04-23 09:15:58'),
-(3, 'Tom', 'Snow', 'snowt@aaa.ac.uk', '07324556768', 'male', NULL, NULL, '$2y$10$tMJyirAuhyhwerpnt6Sk8uXZgWRS8rnlL/Nae32fAgkW6nWMh2UC2', NULL, '2019-04-23 13:28:12', '2019-04-23 13:28:12'),
-(4, 'Sally', 'Cross', 'crosss@aaa.ac.uk', '07895887654', 'male', NULL, NULL, '$2y$10$1mxSPv6uDkvufauuAmFGJeLbcX5KtsSLTxfStK5NaDjliB45GG.5i', NULL, '2019-04-23 13:57:40', '2019-04-23 13:57:40'),
-(5, 'Mr', 'Bean', 'beanm@aaa.ac.uk', '07856445664', 'male', NULL, NULL, '$2y$10$pY94BkTFhu2NNbkfALWeQeCZHcrq/ouP5R4cDFPLdh0OwihyThuoO', NULL, '2019-04-23 14:01:26', '2019-04-23 14:01:26');
+(1, 'Timmy', 'Turner', 'turnert@aaa.ac.uk', '07534557689', 'male', NULL, NULL, '$2y$10$gqNSQhYnGzwLHSBjDNw.NOb67xcft0T8LK4efA/DLzPjrApDwpm7C', NULL, '2019-05-01 19:50:58', '2019-05-01 19:50:58'),
+(2, 'Samantha', 'Jones', 'joness@aaa.ac.uk', '07865556741', 'female', NULL, NULL, '$2y$10$9W2rYGlZiUlkqn1CAc/UauB5MJMWN0lMYaymHZyOgyyf5VcxGCHjm', NULL, '2019-05-01 19:54:29', '2019-05-01 19:54:29');
 
 --
 -- Indexes for dumped tables
@@ -291,19 +297,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `adoption_requests`
 --
 ALTER TABLE `adoption_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -315,13 +321,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `queries`
 --
 ALTER TABLE `queries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

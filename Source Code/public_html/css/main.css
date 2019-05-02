@@ -22,7 +22,7 @@ body {
 .form-btn-approved:hover {background-color: #2980b9;}
 .form-btn-delete {background-color: #e74c3c; color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; border: none;}
 .form-btn-delete:hover {background-color: #c0392b;}
-.form-btn {color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; text-decoration: none;}
+.form-btn {font-size: 0.8em; color: white; padding: 5px 10px; transition-duration: 0.3s; border-radius: 10px; text-decoration: none;}
 .more-images {background-color: rgb(128, 127, 254); border: none;}
 .more-images:hover {background-color: rgb(101, 101, 206);}
 .request-adopt, .request-adopt:visited, .request-adopt:visited {background-color: #e67e22;}
@@ -224,6 +224,9 @@ button:hover, input[type=submit]:hover, input[type=reset]:hover {background-colo
 .container-display tr {border: 4px solid rgb(146, 144, 157);}
 .container-display td {padding: 10px; border: 4px solid rgb(146, 144, 157);}
 .thead-row {text-decoration: underline;}
+.td-image {width: 10%;}
+.table-image {margin: auto;}
+.table-image > img {width: 100%;}
 
 /* SHARED DASHBOARD STYING */
 .title {display: block; margin: 0px;}
@@ -261,7 +264,7 @@ animals-create-availability-input-pair {width: 550px;}
 .btn-show-all-animals:hover {background-color: rgb(196, 84, 80);}
 .animal-filter-list {display: flex; justify-content: center; list-style: none;}
 .animal-filter-list > li {padding: 0px 10px;}
-.animal-filter-list > li:not(:nth-child(1)):not(:nth-last-child(1)) {border-left: 1px solid #95a5a6; border-right: 1px solid #95a5a6;}
+.animal-filter-list > li:not(:nth-child(1)):not(:nth-last-child(1)) {border-right: 2px solid #95a5a6;}
 .animal-filter-link, .animal-filter-link:visited {text-decoration: none; color: #2980b9;}
 /* border: 4px solid rgb(146, 144, 157);*/
 
@@ -369,3 +372,63 @@ animals-create-availability-input-pair {width: 550px;}
   transition-duration: 0.3s;
 }
 .show-query-question > a:hover {background-color: rgb(146, 150, 21);}
+
+/* USER DASHBOARD - animal list*/
+.animals-visual {display: flex; flex-wrap: wrap;}
+.animals-visual-box {
+  margin: 10px;
+  border: 2px solid #bdc3c7;
+  width: 18%;
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.1);
+  transition-duration: 0.3s;
+}
+.animals-visual-box:hover {transform: scale(1.01); box-shadow: 5px 0px 10px rgba(0,0,0,0.2);}
+.animals-visual-box img {width: 100%;}
+.animals-visual-box > div:not(:nth-last-child(1)) {border-bottom: 2px solid #bdc3c7;}
+.animals-visual-pairs {}
+.animals-visual-pair {display: flex; align-items: center;}
+.animals-visual-pair > h1 {font-size: 1.1em; margin: 5px 15px 5px 10px;}
+.animals-visual-pair > p {font-size: 1em; text-align: left;}
+.animals-visual-box-buttons {display: flex; justify-content: center; align-items: center;}
+.animals-visual-box-buttons > a {
+  color: white;
+  margin: 15px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.animals-visual-description {height: 100px;}
+.animals-visual-requested {background-color: #d35400;}
+.animals-visual-request {background-color: #e67e22;}
+.animals-visual-request:hover {background-color: #d35400;}
+.animals-visual-details {background-color: #95a5a6;}
+.animals-visual-details:hover {background-color: #7f8c8d;}
+.animals-visual-pending {background-color: #95a5a6;}
+.animals-visual-pending:hover {background-color: #7f8c8d;}
+.animals-visual-approved {background-color: #2ecc71;}
+.animals-visual-approved:hover {background-color: #27ae60;}
+.animals-visual-rejected {background-color: #e74c3c;}
+.animals-visual-rejected:hover {background-color: #c0392b;}
+
+/* ADOPTION REQUETS - animal list - visual*/
+.requests-visual {display: flex; flex-wrap: wrap; justify-content: center;}
+.requests-visual-box {color: red; border: 5px solid blue;}
+.requests-visual-box-buttons {}
+.requests-visual-box-buttons > a {
+  color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.requests-visual-box-buttons button {
+  width: 95%;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
